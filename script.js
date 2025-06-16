@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to get a random letter from available letters
     function getRandomLetter() {
         if (availableLetters.length === 0) {
-            alert("എല്ലാ അക്ഷരങ്ങളും ലഭിച്ചു കഴിഞ്ഞു! റീസ്റ്റാർട്ട് ചെയ്യുക.");
+            alert("എല്ലാ അക്ഷരങ്ങളും ലഭിച്ചു കഴിഞ്ഞു! Restart ചെയ്യുക.");
             nextBtn.disabled = true; // No more letters, disable Next button
             return '?'; // Return a placeholder
         }
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to create a new scratch card
     function createScratchCard() {
         if (availableLetters.length === 0) {
-            alert("എല്ലാ അക്ഷരങ്ങളും ലഭിച്ചു കഴിഞ്ഞു! റീസ്റ്റാർട്ട് ചെയ്യുക.");
+            alert("എല്ലാ അക്ഷരങ്ങളും ലഭിച്ചു കഴിഞ്ഞു! Restart ചെയ്യുക.");
             nextBtn.disabled = true;
             return;
         }
