@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Register Service Worker (script.js-ൽ ചേർക്കുക)
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js') // sw.js ന്റെ പാത ശരിയാണെന്ന് ഉറപ്പാക്കുക
+            .then((registration) => {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch((err) => {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+    });
+}
+
+// Rest of your existing JavaScript code (DOMContentLoaded listener etc.)
+document.addEventListener('DOMContentLoaded', () => {
+    // ... നിങ്ങളുടെ നിലവിലുള്ള JavaScript കോഡ് ഇവിടെ തുടരും ...
+});
+    
     const scratchCardContainer = document.querySelector('.scratch-card-container');
     const nextBtn = document.getElementById('nextBtn');
     const restartBtn = document.getElementById('restartBtn');
