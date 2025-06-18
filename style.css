@@ -24,7 +24,7 @@ body {
     width: 500px; /* Max width for larger screens */
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 25px; /* Space between sections */
 }
 
