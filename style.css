@@ -1,211 +1,276 @@
 /* General Body Styles */
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif; /* പ്രധാന ടെക്സ്റ്റിന് Inter ഫോണ്ട് */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #007bff; /* നീല പശ്ചാത്തലം */
+    background-color: #004D99; /* കൂടുതൽ പ്രൊഫഷണൽ ആയ നീല (Darker Blue) */
     color: #333;
-    overflow: hidden; /* Prevent scrollbar from appearing due to animations */
-    padding: 20px; /* Add some padding for smaller screens */
-    box-sizing: border-box; /* Include padding in element's total width and height */
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    line-height: 1.6; /* വായിക്കാൻ എളുപ്പമാക്കാൻ ലൈൻ ഹൈറ്റ് */
 }
 
-/* Container for centering content */
+/* Container Styles - കളർ പാലറ്റും മറ്റ് മാറ്റങ്ങളും ഇവിടെ തുടങ്ങുന്നു */
 .container {
-    background-color: #ffffff; /* കണ്ടെയ്നറിന് വെള്ള നിറം */
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background-color: #FFFFFF; /* വെള്ള നിറം നിലനിർത്തുന്നു */
+    padding: 40px; /* പാഡിംഗ് കൂട്ടുന്നു */
+    border-radius: 20px; /* ബോർഡർ റേഡിയസ് കൂട്ടുന്നു */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); /* ഷാഡോ കൂടുതൽ ഭംഗിയാക്കുന്നു */
     text-align: center;
     max-width: 90%;
-    width: 500px; /* Max width for larger screens */
+    width: 550px; /* കണ്ടെയ്നറിന്റെ വീതി കൂട്ടുന്നു */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 25px; /* Space between sections */
+    gap: 30px; /* വിഭാഗങ്ങൾക്കിടയിലുള്ള അകലം കൂട്ടുന്നു */
 }
 
-/* Selection Box (for selecting letter range) */
+/* Heading Styles */
+h1 {
+    font-family: 'Poppins', sans-serif; /* ഹെഡിംഗിന് Poppins ഫോണ്ട് */
+    color: #004D99; /* ബോഡി കളർ പോലെ നീല */
+    font-weight: 700; /* ബോൾഡ് */
+    font-size: 2.5rem; /* വലുപ്പം കൂട്ടുന്നു */
+    margin-bottom: 10px; /* താഴെ കുറഞ്ഞ മാർജിൻ */
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+
+/* Selection Box Styles */
 .selection-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    padding: 15px;
-    background-color: #f0f8ff; /* Light background for selection box */
-    border-radius: 10px;
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 20px; /* അകലം കൂട്ടുന്നു */
+    padding: 20px;
+    background-color: #E6F0F8; /* ഇളം നീല പശ്ചാത്തലം */
+    border-radius: 15px; /* ബോർഡർ റേഡിയസ് കൂട്ടുന്നു */
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
 
 .selection-box label {
-    font-weight: bold;
-    color: #0056b3;
+    font-weight: 600; /* FontWeight കൂട്ടുന്നു */
+    color: #004D99; /* നീല നിറം */
+    font-size: 1.1rem;
 }
 
 .selection-box select {
-    padding: 10px 15px;
-    border: 1px solid #ced4da;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 12px 20px; /* പാഡിംഗ് കൂട്ടുന്നു */
+    border: 1px solid #B0C4DE; /* ഇളം നീല ബോർഡർ */
+    border-radius: 10px; /* ബോർഡർ റേഡിയസ് കൂട്ടുന്നു */
+    font-size: 1.05rem;
     cursor: pointer;
-    background-color: #e9ecef;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    -webkit-appearance: none; /* Remove default select styling for better consistency */
+    background-color: #F8F8F8; /* ഇളം ഗ്രേ */
+    transition: all 0.3s ease; /* എല്ലാ മാറ്റങ്ങൾക്കും ട്രാൻസിഷൻ */
+    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 24 24%22 fill%3D%22%23212529%22%3E%3Cpath d%3D%22M7 10l5 5 5-5z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox%3D%220 0 24 24%22 fill%3D%22%234A5568%22%3E%3Cpath d%3D%22M7 10l5 5 5-5z%22%2F%3E%3C%2Fsvg%3E'); /* കസ്റ്റം ആരോ നിറം മാറ്റുന്നു */
     background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 16px;
+    background-position: right 15px center;
+    background-size: 18px;
 }
 
 .selection-box select:focus {
     border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 0 0.3rem rgba(0, 123, 255, 0.2);
     outline: none;
 }
+
 
 /* Scratch Card Container */
 .scratch-card-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 250px; /* Ensure space even if no card is present */
+    min-height: 280px; /* ഉയരം കൂട്ടുന്നു */
+    perspective: 1000px; /* 3D effect for potential flip animation */
 }
 
 /* Scratch Box Styles */
 .scratch-box {
-    width: 250px; /* സ്ക്രാച്ച് ബോക്സിന് വീതി */
-    height: 250px; /* സ്ക്രാച്ച് ബോക്സിന് ഉയരം */
-    background-color: #ffffff; /* വെള്ള നിറം */
-    border: 3px solid #ddd;
-    border-radius: 15px;
+    width: 280px; /* സ്ക്രാച്ച് ബോക്സിന്റെ വീതിയും ഉയരവും കൂട്ടുന്നു */
+    height: 280px;
+    background-color: #F8F8F8; /* ഇളം ഗ്രേ പശ്ചാത്തലം */
+    border: 5px solid #004D99; /* ബോർഡറിന് കടും നീല നിറം */
+    border-radius: 20px; /* ബോർഡർ റേഡിയസ് കൂട്ടുന്നു */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 6rem; /* അക്ഷരത്തിന്റെ വലുപ്പം */
-    font-weight: bold;
-    color: #ff0000; /* അക്ഷരങ്ങളുടെ നിറം ചുവപ്പ് */
-    position: relative; /* For canvas overlay */
-    overflow: hidden; /* Hide overflow from canvas */
+    font-size: 7rem; /* അക്ഷരത്തിന്റെ വലുപ്പം കൂട്ടുന്നു */
+    font-weight: 700; /* കൂടുതൽ ബോൾഡ് */
+    color: #DC3545; /* ചുവപ്പ് നിറം നിലനിർത്തുന്നു */
+    position: relative;
+    overflow: hidden;
     cursor: grab;
-    user-select: none; /* Prevent text selection */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18); /* ഷാഡോ കൂടുതൽ ആകർഷകമാക്കുന്നു */
+    transition: transform 0.3s ease-out; /* ചെറിയ ട്രാൻസിഷൻ */
 }
 
 /* Hidden content before scratching */
 .scratch-box .hidden-content {
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease-out; /* Smooth transition when revealed */
-    position: absolute; /* To allow canvas on top */
-    z-index: 1; /* Below canvas initially */
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother animation */
+    position: absolute;
+    z-index: 1;
 }
 
 /* Reveal content after scratching */
 .scratch-box.revealed .hidden-content {
-    opacity: 1; /* Show content when revealed */
-    z-index: 3; /* Above canvas */
+    opacity: 1;
+    z-index: 3;
+    /* Optional: add a slight bounce/scale when revealed */
+    animation: revealBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
 }
+
+@keyframes revealBounce {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
 
 /* Canvas for scratching effect */
 .scratch-canvas {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2; /* On top of the hidden content */
-    border-radius: 12px; /* Match scratch-box border-radius */
+    z-index: 2;
+    border-radius: 18px; /* Match scratch-box border-radius -2px */
+    transition: opacity 0.5s ease-out;
 }
 
 /* Controls (Next and Restart Buttons) */
 .controls {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between buttons */
-    margin-top: 20px;
+    gap: 25px; /* ബട്ടണുകൾക്കിടയിലുള്ള അകലം കൂട്ടുന്നു */
+    margin-top: 25px;
 }
 
 .control-button {
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    font-weight: bold;
+    padding: 15px 30px; /* പാഡിംഗ് കൂട്ടുന്നു */
+    font-size: 1.2rem; /* ഫോണ്ട് വലുപ്പം കൂട്ടുന്നു */
+    font-weight: 700; /* കൂടുതൽ ബോൾഡ് */
     color: #ffffff;
     background-color: #28a745; /* Green for Next button */
     border: none;
-    border-radius: 8px;
+    border-radius: 10px; /* ബോർഡർ റേഡിയസ് കൂട്ടുന്നു */
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18); /* ഷാഡോ മെച്ചപ്പെടുത്തുന്നു */
 }
 
 .control-button:hover {
     background-color: #218838;
-    transform: translateY(-2px);
+    transform: translateY(-3px); /* ഹോവറിൽ മുകളിലേക്ക് നീങ്ങുന്നു */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .control-button:active {
     transform: translateY(0);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.control-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    opacity: 0.7;
 }
 
 .restart-button {
-    background-color: #dc3545; /* Red for Restart button */
-    font-size: 1.5rem; /* Larger icon for restart */
-    padding: 10px 20px; /* Adjust padding for icon */
+    background-color: #DC3545; /* Red for Restart button */
+    font-size: 1.8rem; /* ഐക്കൺ വലുപ്പം കൂട്ടുന്നു */
+    padding: 12px 25px; /* പാഡിംഗ് ക്രമീകരിക്കുന്നു */
 }
 
 .restart-button:hover {
     background-color: #c82333;
 }
 
-/* Responsive Design */
+
+/* Responsive Design (മാറ്റങ്ങൾ ഉൾപ്പെടുത്തി അപ്ഡേറ്റ് ചെയ്യുന്നു) */
 @media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
     .container {
-        padding: 20px;
+        padding: 25px;
         width: 100%;
-        margin: 0 10px; /* Add some margin on very small screens */
+        margin: 0 10px;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
     }
 
     .scratch-box {
-        width: 200px;
-        height: 200px;
-        font-size: 5rem;
+        width: 220px;
+        height: 220px;
+        font-size: 6rem;
     }
 
     .control-button {
-        padding: 10px 20px;
-        font-size: 1rem;
+        padding: 12px 25px;
+        font-size: 1.1rem;
     }
 
     .restart-button {
-        font-size: 1.2rem;
-        padding: 8px 16px;
+        font-size: 1.5rem;
+        padding: 10px 20px;
     }
 
     .selection-box {
-        flex-direction: column; /* Stack select options on small screens */
-        gap: 10px;
-        padding: 10px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    .selection-box select {
+        width: 100%; /* Make selects take full width on small screens */
     }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
     .scratch-box {
         width: 180px;
         height: 180px;
-        font-size: 4rem;
+        font-size: 4.5rem;
     }
 
     .controls {
-        flex-direction: column; /* Stack buttons vertically on very small screens */
+        flex-direction: column;
         gap: 15px;
     }
 
     .control-button {
-        width: 80%; /* Make buttons wider */
+        width: 90%;
         margin: 0 auto;
     }
-}
+    }
+        
